@@ -1,3 +1,17 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    #~/.dotfiles: ''
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/bin/ack: tools/ack
+    ~/bin/z.sh: tools/z/z.sh
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
