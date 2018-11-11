@@ -1,3 +1,9 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "tools/tools/z"]
+	path = tools/tools/z
+	url = https://github.com/rupa/z.git
+[submodule "tools/z"]
+	path = tools/z
+	url = https://github.com/rupa/z.git
