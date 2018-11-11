@@ -16,3 +16,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+
+# Other things to rememeber:
+#    sudo apt-get install silversearcher-ag # For 'ag' which is a fast 'ack' ;-)
+#    ~/.dotfiles/tools/fzf/install # To download the right binary
