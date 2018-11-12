@@ -44,3 +44,4 @@ TODO
 ----
 
 * bashrc is the one from the Ubuntu WSL, not suitable for vogon et al.
+* Fix path in zshrc (currently WSL only)
