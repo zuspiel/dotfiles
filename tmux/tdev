@@ -1,0 +1,70 @@
+tmux has-session -t DEVEL &> /dev/null
+
+if [ $? != 0 ]
+then
+
+tmux new-session -s DEVEL -n 'Kernel' -d
+tmux send-keys -t DEVEL 'vim /net/perseus_development/users/jheyd/svn/kernel/trunk/src' C-m
+tmux split-window -v -t DEVEL:1
+tmux send-keys -t DEVEL:1.2 'cd /net/perseus_development/users/jheyd/svn/kernel/trunk/src;bash' C-m C-l
+tmux resize-pane -t DEVEL:1.2 -y 10
+tmux split-window -h -t DEVEL:1.2
+tmux send-keys -t DEVEL:1.3 'cd /net/perseus_development/users/jheyd/svn/kernel/trunk/obj;bash' C-m C-l
+tmux resize-pane -t DEVEL:1.1 -Z
+
+tmux new-window -n Modules -t DEVEL
+tmux send-keys -t DEVEL:2 'vim /net/perseus_development/users/jheyd/svn/modules/trunk' C-m
+tmux split-window -v -t DEVEL:2
+tmux send-keys -t DEVEL:2.2 'cd /net/perseus_development/users/jheyd/svn/modules/trunk;bash' C-m C-l
+tmux resize-pane -t DEVEL:2.2 -y 10
+tmux split-window -h -t DEVEL:2.2
+tmux send-keys -t DEVEL:2.3 'cd /net/perseus_development/users/jheyd/svn/modules/trunk;bash' C-m C-l
+tmux select-pane -t DEVEL:2.1
+
+tmux new-window -n 'Release' -t DEVEL
+tmux send-keys -t DEVEL:3   'cd /net/perseus_development/users/jheyd/svn/modules/release;bash' C-m C-l
+tmux split-window -h -t DEVEL:3
+tmux send-keys -t DEVEL:3.2 'cd /net/perseus_development/users/jheyd/svn/modules/release;bash' C-m C-l
+tmux split-window -v -t DEVEL:3.2
+tmux send-keys -t DEVEL:3.3 'cd /net/perseus_development/users/jheyd/svn/modules/release;bash' C-m C-l
+tmux select-pane -t DEVEL:3.1
+
+tmux new-window -n 'Exploration Kernel' -t DEVEL
+tmux send-keys -t DEVEL:4 'cd /net/perseus_development/users/jheyd/svn/kernel/trunk/src; vim .' C-m
+tmux split-window -h -t DEVEL:4
+tmux send-keys -t DEVEL:4.2 'cd /net/perseus_development/users/jheyd/svn/kernel/trunk/src;bash' C-m C-l
+tmux select-pane -t DEVEL:4.2
+
+tmux new-window -n 'Exploration Modules' -t DEVEL
+tmux send-keys -t DEVEL:5 'cd /net/perseus_development/users/jheyd/svn/modules/trunk; vim .' C-m C-l
+tmux split-window -h -t DEVEL:5
+tmux send-keys -t DEVEL:5.2 'cd /net/perseus_development/users/jheyd/svn/modules/trunk;bash' C-m C-l
+tmux select-pane -t DEVEL:5.2
+
+tmux new-window -n 'Cluster Logs' -t DEVEL
+tmux send-keys -t DEVEL:6 'cd /vol1/vortex/cluster_logs/auto/;bash' C-m C-l
+tmux split-window -v -t DEVEL:6
+tmux send-keys -t DEVEL:6.2 'cd /vol1/vortex/cluster_logs/auto/;bash' C-m C-l
+tmux split-window -h -t DEVEL:6.1
+tmux send-keys -t DEVEL:6.3 'cd /vol1/vortex/cluster_logs/auto/;bash' C-m C-l
+tmux split-window -h -t DEVEL:6.2
+tmux send-keys -t DEVEL:6.4 'cd /vol1/vortex/cluster_logs/auto/;bash' C-m C-l
+tmux select-pane -t DEVEL:6.1
+
+tmux new-window -n 'Misc' -t DEVEL
+tmux send-keys -t DEVEL:7 'cd /home/jheyd;bash' C-m C-l
+tmux split-window -v -t DEVEL:7
+tmux send-keys -t DEVEL:7.2 'cd /home/jheyd;bash' C-m C-l
+tmux split-window -h -t DEVEL:7.1
+tmux send-keys -t DEVEL:7.3 'cd /home/jheyd;bash' C-m C-l
+tmux split-window -h -t DEVEL:7.2
+tmux send-keys -t DEVEL:7.4 'cd /home/jheyd;bash' C-m C-l
+tmux select-pane -t DEVEL:7.1
+
+tmux select-window -t DEVEL:1
+
+fi
+
+#tmux attach -d -t DEVEL
+tmux attach -t DEVEL
+

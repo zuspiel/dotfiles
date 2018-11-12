@@ -8,9 +8,12 @@
     #~/.dotfiles: ''
     ~/.zshrc: zshrc
     ~/.bashrc: bashrc
-    ~/.tmux.conf: tmux.conf
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/bin/tdev: tmux/tdev
+    ~/bin/tgcp: tmux/tgcp
+    ~/bin/tdevops: tmux/tdevops
     ~/bin/ack: tools/ack
     ~/bin/z.sh: tools/z/z.sh
 
@@ -21,3 +24,4 @@
 #    sudo apt-get install zsh               # ;-)
 #    sudo apt-get install silversearcher-ag # For 'ag' which is a fast 'ack' ;-)
 #    ~/.dotfiles/tools/fzf/install          # To download the right binary
+#    pip install -U Pygments                # 'cat' with colors

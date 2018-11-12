@@ -140,5 +140,10 @@ esac
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lla="ls -la"
+alias llt="ls -lrt"
+alias llat="ls -lart"
+# `cat` with beautiful colors. requires: pip install -U Pygments
+alias c='pygmentize -O style=borland -f console256 -g'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

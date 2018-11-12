@@ -1,0 +1,59 @@
+tmux has-session -t DEVOPS &> /dev/null
+
+if [ $? != 0 ]
+then
+
+tmux new-session -s DEVOPS -n 'Vagrant' -d
+tmux send-keys -t DEVOPS 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux split-window -v -t DEVOPS:1
+tmux send-keys -t DEVOPS:1.2 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux resize-pane -t DEVOPS:1.2 -y 10
+tmux split-window -h -t DEVOPS:1.2
+tmux send-keys -t DEVOPS:1.3 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+#tmux resize-pane -t DEVOPS:1.1 -Z
+
+tmux new-window -n 'Ansible' -t DEVOPS
+tmux send-keys -t DEVOPS:2   'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux split-window -h -t DEVOPS:2
+tmux send-keys -t DEVOPS:2.2 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux split-window -v -t DEVOPS:2.2
+tmux send-keys -t DEVOPS:2.3 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux select-pane -t DEVOPS:2.1
+
+tmux new-window -n 'WS' -t DEVOPS
+tmux send-keys -t DEVOPS:3   'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux split-window -h -t DEVOPS:3
+tmux send-keys -t DEVOPS:3.2 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux split-window -v -t DEVOPS:3.2
+tmux send-keys -t DEVOPS:3.3 'cd /home/jheyd/vagrant/devops/;zsh' C-m C-l
+tmux select-pane -t DEVOPS:3.1
+
+#tmux new-window -n 'DEVOPS 1' -t DEVOPS
+#tmux send-keys -t DEVOPS:4 'cd;zsh' C-m
+#tmux split-window -h -t DEVOPS:4
+#tmux send-keys -t DEVOPS:4.2 'cd;zsh' C-m C-l
+#tmux select-pane -t DEVOPS:4.2
+#
+#tmux new-window -n 'DEVOPS 2' -t DEVOPS
+#tmux send-keys -t DEVOPS:5 'cd;zsh' C-m C-l
+#tmux split-window -h -t DEVOPS:5
+#tmux send-keys -t DEVOPS:5.2 'cd;zsh' C-m C-l
+#tmux select-pane -t DEVOPS:5.2
+#
+#tmux new-window -n 'DEVOPS Monitor' -t DEVOPS
+#tmux send-keys -t DEVOPS:6 'cd;zsh' C-m C-l
+#tmux split-window -v -t DEVOPS:6
+#tmux send-keys -t DEVOPS:6.2 'cd;zsh' C-m C-l
+#tmux split-window -h -t DEVOPS:6.1
+#tmux send-keys -t DEVOPS:6.3 'cd;zsh' C-m C-l
+#tmux split-window -h -t DEVOPS:6.2
+#tmux send-keys -t DEVOPS:6.4 'cd;zsh' C-m C-l
+#tmux select-pane -t DEVOPS:6.1
+
+tmux select-window -t DEVOPS:1
+
+fi
+
+#tmux attach -d -t DEVOPS
+tmux attach -t DEVOPS
+
