@@ -6,6 +6,7 @@
 
 - link:
     #~/.dotfiles: ''
+    ~/.oh-my-zsh: oh-my-zsh
     ~/.zshrc: zshrc
     ~/.bashrc: bashrc
     ~/.vim: vim
@@ -20,8 +21,3 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
-# Other things to rememeber:
-#    sudo apt-get install zsh               # ;-)
-#    sudo apt-get install silversearcher-ag # For 'ag' which is a fast 'ack' ;-)
-#    ~/.dotfiles/tools/fzf/install          # To download the right binary
-#    pip install -U Pygments                # 'cat' with colors

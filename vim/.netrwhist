@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/jheyd/gcp/fix/ansible-gcp/roles/users-test'
 let g:netrw_dirhist_2='/home/jheyd/gcp/fix/ansible-gcp/roles/users-test/vars'
 let g:netrw_dirhist_3='/home/jheyd/gcp/fix/ansible-gcp'
 let g:netrw_dirhist_4='/home/jheyd/gcp/fix/ansible-gcp/roles'
 let g:netrw_dirhist_5='/home/jheyd/gcp/fix/ansible-gcp/roles/ansible'
 let g:netrw_dirhist_6='/home/jheyd/gcp/fix/ansible-gcp/roles/ansible/tasks'
+let g:netrw_dirhist_7='/home/jheyd'
