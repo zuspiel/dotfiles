@@ -31,17 +31,26 @@ to get everything set up.
 Other things to remember for a complete experience:
 
 * ZSH...
+
 ** sudo apt-get install zsh
+
 ** You'll also want a terminal font with the nerd font patches
+
 * Fast alternative to ack that's 33% quicker to type, too
+
 ** sudo apt-get install silversearcher-ag
+
 * fzf is a fuzzy search tool for a lot of places. The following command download the right binary and installs it
+
 ** ~/.dotfiles/tools/fzf/install
+
 * 'cat' with colors, alias is 'c'
+
 ** pip install -U Pygments
 
 TODO
 ----
 
 * bashrc is the one from the Ubuntu WSL, not suitable for vogon et al.
+
 * Fix path in zshrc (currently WSL only)
