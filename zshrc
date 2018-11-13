@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/jheyd/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_578093:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Users/jheyd/AppData/Local/Microsoft/WindowsApps:/snap/bin:/mnt/c/Program Files/Oracle/VirtualBox"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/jheyd/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_578093:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Users/jheyd/AppData/Local/Microsoft/WindowsApps:/snap/bin:/mnt/c/Program Files/Oracle/VirtualBox:~/.local/bin"
 
 # Path to your oh-my-zsh installation.
   export ZSH="/home/jheyd/.oh-my-zsh"
@@ -149,7 +149,7 @@ alias gitp="git pull"
 alias gitca="git commit -a"
 alias gitd="git diff"
 # `cat` with beautiful colors. requires: pip install -U Pygments
-alias c='pygmentize -O style=borland -f console256 -g'
+alias c='~/.local/bin/pygmentize -O style=borland -f console256 -g'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
